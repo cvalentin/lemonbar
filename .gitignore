@@ -22,3 +22,6 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
+#Because Stephen sucks
+.DS_Store
