@@ -1,4 +1,4 @@
-package main
+package bgta
 
 import (
     "log"
@@ -7,21 +7,24 @@ import (
     "github.com/gorilla/mux"
 )
 
-func handler(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "HELLO WORLD", r.URL.Path[1:])
+
+
+func init() {
+    r := mux.NewRouter()
+
+    r.HandleFunc("/profile", coolHandler)
+    r.HandleFunc("/events", coolHandler)
+    r.HandleFunc("/", handler)
+
+    http.Handle("/", r)
+    log.Println("Listening...")
+    http.ListenAndServe(":3000", nil)
 }
 
 func coolHandler(w http.ResponseWriter, r *http.Request) {
   fmt.Fprintf(w, "BACKEND RULES")
 }
 
-func main() {
-    r := mux.NewRouter()
-    r.HandleFunc("/", handler)
-    r.HandleFunc("/profile", coolHandler)
-    r.HandleFunc("/events", coolHandler)
-
-    http.Handle("/", r)
-    log.Println("Listening...")
-    http.ListenAndServe(":3000", nil)
+func handler(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprintf(w, "Hi there, I love %s!", r.URL.Path[1:])
 }
