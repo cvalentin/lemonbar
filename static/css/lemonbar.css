@@ -14,7 +14,7 @@ body{
 
 .content{
 	display: flex;
-	height: 100%;
+	height: calc(100% - 50px);
 }
 
 .nav-header{
@@ -25,13 +25,14 @@ body{
 
 .nav-left{
 	display: inline-block;
-	width: 16%;
-	background: #cbd0d3;
+	background: #ecf0f1;
 	height: 100%;
+	min-width: 200px;
 }
 
 .nav-left ul{
 	list-style-type: none;
+	margin: 0;
 	padding: 0;
 }
 
@@ -40,9 +41,9 @@ body{
 }
 
 .nav-left li{
-	margin-bottom: 16px;
 	border-bottom: 1px solid black;
 	padding-bottom: 16px;
+	padding-top: 16px;
 	padding-right: 16px;
 	text-align: right;
 }
@@ -54,10 +55,96 @@ body{
 
 .content-main{
 	display: inline-block;
-	width: 84%;
+	width: 100%;
+}
+
+.content-header{
+	text-align: center;
+	margin-top: 23px;
+	width: 100%;
 }
 
 .content-form{
 	position: absolute;
 	display: none;
+}
+
+.content-columns{
+	display: flex;
+}
+
+.content-picture{
+	width: 250px;
+	height: 250px;
+	border-radius: 250px;
+	overflow: hidden;
+	margin: auto;
+}
+
+.profile.column-1{
+	width: 40%;
+	display: inline-block;
+	margin-left: 23px;
+	margin-top: 50px;
+}
+
+.profile.column-2{
+	display: inline-block;
+	width: 60%;
+	margin-left: 23px;
+	margin-top: 50px;	
+}
+
+.profile-picture{
+	width: 250px;
+}
+
+.text-accent{
+	display: block;
+	font-style: italic;
+}
+
+.text-label{
+	display: inline-block;
+	width: 20%;
+	margin: auto;
+	text-align: center;
+}
+
+.text-faint{
+	font-family: 'Lato Hairline', arial, sans-serif;
+	color: #999999;
+	font-weight: normal;
+}
+
+.text-spacing{
+	display: block;
+	letter-spacing: 1px;
+	font-size: 0.9em;
+}
+
+.text-title{
+	display: block;
+	font-weight: bold;
+}
+
+@media (max-width: 800px) {
+	.content-main{
+		text-align: center;
+	}
+
+	.content-columns{
+		display: block;
+	}
+
+	.profile.column-1{
+		width: 100%;
+		margin: 0;
+		margin-top: 23px;
+	}
+	.profile.column-2{
+		width: 100%;
+		margin: 0;
+		margin-top: 23px;
+	}
 }
