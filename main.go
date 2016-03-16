@@ -3,6 +3,8 @@ package main
 import (
     "log"
     "net/http"
+    "os"
+    "fmt"
 )
 
 func getPort() string {
