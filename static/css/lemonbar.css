@@ -56,6 +56,7 @@ body{
 .content-main{
 	display: inline-block;
 	width: 100%;
+	padding-right: 23px;
 }
 
 .content-header{
@@ -69,8 +70,26 @@ body{
 	display: none;
 }
 
+.content-cards{
+	margin-top: 23px;
+	margin-left: 23px;
+}
+
+.content-labels{
+	display: flex;
+}
+
 .content-columns{
 	display: flex;
+}
+
+.content-table{
+	margin-top: 23px;
+}
+
+.content-title{
+	margin-left: 23px;
+	margin-top: 50px;
 }
 
 .content-picture{
@@ -81,11 +100,12 @@ body{
 	margin: auto;
 }
 
-.column-1{
+.column-1, .column-2, .column-3{
 	width: 33%;
 	display: inline-block;
 	margin-left: 23px;
 	margin-top: 50px;
+	/*border: 1px solid black;*/ /*testing*/
 }
 
 .column-2-3{
@@ -106,7 +126,7 @@ body{
 
 .text-label{
 	display: inline-block;
-	width: 20%;
+	width: 30%;
 	margin: auto;
 	text-align: center;
 }
@@ -128,6 +148,14 @@ body{
 	font-weight: bold;
 }
 
+.text-small{
+	font-size: 0.8em;
+}
+
+.text-large{
+	font-size: 1.8em;
+}
+
 @media (max-width: 800px) {
 	.content-main{
 		text-align: center;
@@ -135,13 +163,19 @@ body{
 
 	.content-columns{
 		display: block;
+		margin-left: 23px;
 	}
 
-	.column-1{
+	.content-table{
+		margin-left: 23px;
+	}
+
+	.column-1, .column-2, .column-3{
 		width: 100%;
 		margin: 0;
 		margin-top: 23px;
 	}
+
 	.column-2-3{
 		width: 100%;
 		margin: 0;
