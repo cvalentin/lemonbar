@@ -76,7 +76,7 @@ body{
 }
 
 .content-labels{
-	display: flex;
+	display: inline-block;
 }
 
 .content-label{
@@ -88,6 +88,7 @@ body{
 	border-radius: 5px;
 	background: #fbd9a4;
 	position: relative;
+	display: inline-block;
 }
 
 .close{

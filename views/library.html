@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title>LemonBar v0.1.0</title>
-	<script type="text/javascript" src="../static/js/lemonbar.js"></script>
 	<link rel="stylesheet" type="text/css" href="../static/css/lemonbar.css">
 	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -41,14 +40,14 @@
 			</div>
 			<div class="content-search">
 				<div>
-					<form>
-						<input type="text" name="player" placeholder="search members...">
-					</form>
+					<!-- <form> -->
+						<input class="form-input" type="text" name="player" placeholder="search members...">
+					<!-- </form> -->
 				</div>
 				<div class="content-labels">
-					<div class="content-label">player label<span class="close">x</span></div>
-					<div class="content-label">player label<span class="close">x</span></div>
-					<div class="content-label">player label<span class="close">x</span></div>
+					<!-- <div class="content-label">player label 1<span class="close">x</span></div>
+					<div class="content-label">player label 2<span class="close">x</span></div>
+					<div class="content-label">player label 3<span class="close">x</span></div> -->
 				</div>
 			</div>
 			<div class="content-table">
@@ -56,5 +55,7 @@
 			</div>
 		</div>
 	</div>
-</body>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script type="text/javascript" src="../static/js/lemonbar.js" defer></script>
+	</body>
 </html>
