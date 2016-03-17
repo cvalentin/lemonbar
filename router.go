@@ -6,13 +6,14 @@ import (
     "net/http"
     "io/ioutil"
     "github.com/gorilla/mux"
+    "github.com/cvalentin/lemonbar/controllers"
 )
 
 func getRoutes() *mux.Router {
     r := mux.NewRouter()
 
     r.HandleFunc("/group", staticPageHandler)
-    r.HandleFunc("/profile", staticPageHandler)
+    r.HandleFunc("/profile", controllers.GetProfileIndex)
     r.HandleFunc("/index", staticPageHandler)
     r.HandleFunc("/library", staticPageHandler)
     r.HandleFunc("/event", staticPageHandler)
