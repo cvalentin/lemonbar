@@ -1,5 +1,5 @@
 package controller
 
-func onLoad() {
+func onLoad() string {
     return "Ash Douglas Hill"
 }
