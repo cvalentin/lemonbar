@@ -141,7 +141,7 @@ body{
 }
 
 .content-labels{
-	display: inline-block;
+	display: flex;
 }
 
 .content-label{
