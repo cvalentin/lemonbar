@@ -2,12 +2,13 @@
 <html>
 <head>
 	<title>LemonBar v0.1.0</title>
-	<script type="text/javascript" src="../static/js/lemonbar.js"></script>
+	<!-- <script type="text/javascript" src="../static/js/lemonbar.js"></script> -->
 	<link rel="stylesheet" type="text/css" href="../static/css/lemonbar.css">
 	<link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
+	<div class="content-hover content-cover"></div>
 	<div class="nav-header">LemonBar</div>
 	<div class="content">
 		<div class="nav-left">
@@ -49,7 +50,7 @@
 					</div> -->
 				</div>
 				<div class="profile column-2-3">
-					<div class="content-labels">
+					<div class="content-badges">
 						<div class="text-label">39<br><span class="text-faint">Wins</span></div>
 						<div class="text-label">249<br><span class="text-faint">Events</span></div>
 						<div class="text-label">341<br><span class="text-faint">Games</span></div>
@@ -59,7 +60,26 @@
 			<div class="profile content-table">
 				board game collection
 			</div>
-		</div>
+			<div class="content-form content-hover">
+				<i class="fa fa-times-circle content-form-close"></i>
+				add new game(s) to your library<br>
+				<div class="content-search">
+					<div>
+						<!-- <form> -->
+							<input class="form-input" type="text" name="player" placeholder="game name">
+						<!-- </form> -->
+					</div>
+					<div class="content-labels"></div>
+					<div class="button library-game-add">
+						Submit
+					</div>
+				</div>
+			</div>
+			<div class="content-add">
+				<i class="fa fa-plus fa-2x"></i>
+			</div>
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script type="text/javascript" src="../static/js/profile.js" defer></script>
 </body>
 </html>
