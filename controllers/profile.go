@@ -2,21 +2,31 @@ package controllers
 
 import (
     "log"
-    "fmt"
     "net/http"
-    "io/ioutil"
-    "path/filepath"
-    "os"
+    "html/template"
 )
 
+const TemplatePath string = "views/"
+
 func GetProfileIndex(w http.ResponseWriter, r *http.Request){
-    dir, _ := os.Getwd()
-    indexHTML := filepath.Join(dir, "views/profile.html")
-    body, err := ioutil.ReadFile(indexHTML)
+
+    page, err := template.New("profile").ParseFiles(TemplatePath + "profile.tmpl")
+
+    if err!= nil {
+        log.Fatal(err)
+    }
+
+    page, err = page.ParseGlob(TemplatePath + "common/*")
+
+    if err!= nil {
+        log.Fatal(err)
+    }
+
+    err = page.ExecuteTemplate(w,"profile", nil)
+
     if err != nil {
         log.Fatal(err)
     }
-    fmt.Fprintf(w, "%s", string(body))
 }
 
 func onLoad() string {
